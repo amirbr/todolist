@@ -1,6 +1,29 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDRI0P6MAeoJME5kC_Wvf14lyBGOPDTaA0",
+  authDomain: "todo-list-36ca5.firebaseapp.com",
+  projectId: "todo-list-36ca5",
+  storageBucket: "todo-list-36ca5.firebasestorage.app",
+  messagingSenderId: "214942858361",
+  appId: "1:214942858361:web:a5dc8fd0e60b3a2c9328a8",
+  measurementId: "G-C67G8747EL"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+console.log({ analytics });
+
 export default function Home() {
   return (
     <div className={styles.page}>
